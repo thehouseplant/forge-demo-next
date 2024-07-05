@@ -1,95 +1,124 @@
-import Image from "next/image";
+'use client';
+
+import { defineComponents } from '@tylertech/forge'
 import styles from "./page.module.css";
+
+defineComponents();
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <forge-scaffold>
+        <forge-app-bar slot="header" title-text="Forge React">
+          <forge-app-bar-menu-button slot="start"></forge-app-bar-menu-button>
+          <forge-app-bar-search slot="center">
+            <input type="text" placeholder="Search" />
+          </forge-app-bar-search>
+          <forge-app-bar-help-button slot="end"></forge-app-bar-help-button>
+          <forge-app-bar-notification-button
+            slot="end"
+          ></forge-app-bar-notification-button>
+          <forge-app-bar-app-launcher-button
+            slot="end"
+            allow-more="true"
+          ></forge-app-bar-app-launcher-button>
+          <forge-app-bar-profile-button
+            slot="end"
+            avatar-text="Sean Collins"
+            full-name="Sean Collins"
+            email="sean.collins@tylertech.com"
+          ></forge-app-bar-profile-button>
+        </forge-app-bar>
+        <forge-drawer slot="body-left">
+          <aside>
+            <forge-list navlist>
+              <forge-list-item selected>
+                <forge-icon slot="start" name="authority"></forge-icon>
+                <a href="#">Authority</a>
+              </forge-list-item>
+              <forge-list-item>
+                <forge-icon slot="start" name="send"></forge-icon>
+                <a href="#">Categories</a>
+              </forge-list-item>
+              <forge-list-item>
+                <forge-icon slot="start" name="drafts"></forge-icon>
+                <a href="#">View Types</a>
+              </forge-list-item>
+              <forge-list-item>
+                <forge-icon slot="start" name="send"></forge-icon>
+                <a href="#">Sent</a>
+              </forge-list-item>
+            </forge-list>
+          </aside>
+        </forge-drawer>
+        <main slot="body">
+          <forge-banner theme="info">
+            This site is heavily under construction. Please bear with us as we assemble the content.
+          </forge-banner>
+          <forge-card>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <forge-button id="popover-trigger" variant="raised">Show Popover</forge-button>
+            <forge-popover
+              anchor="popover-trigger"
+              placement="bottom"
+              position-strategy="fixed"
+            >
+              <forge-scaffold>
+                <forge-toolbar no-border slot="header">
+                  <h2 className="forge-typography--heading4" slot="start">Popover Title</h2>
+                </forge-toolbar>
+                <div
+                  slot="body"
+                  style={{ width: "300px" }}
+                >
+                  Popover content
+                </div>
+                <forge-toolbar no-border slot="footer">
+                  <forge-button slot="end" variant="filled">Close</forge-button>
+                </forge-toolbar>
+              </forge-scaffold>
+            </forge-popover>
+          </forge-card>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file-text.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <forge-card>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <forge-button variant="raised">Show Dialog</forge-button>
+            <forge-dialog
+              aria-labelledby="dialog-title"
+              aria-describedby="dialog-message"
+            >
+              <forge-scaffold>
+                <forge-toolbar slot="header" no-divider>
+                  <h1 class="forge-typography--heading4" id="dialog-title" slot="start">
+                    Title text
+                  </h1>
+                  <forge-icon-button slot="end" aria-label="Close dialog">
+                    <forge-icon name="close"></forge-icon>
+                  </forge-icon-button>
+                </forge-toolbar>
+                <p slot="body" id="dialog-message">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed
+                  pariatur error repellendus eos! Quas, optio esse ad illum quis
+                  blanditiis rerum quia. Corrupti, ad hic velit praesentium voluptatum
+                  dolores?
+                </p>
+                <forge-toolbar slot="footer" no-divider>
+                  <forge-button slot="end" variant="raised">Close</forge-button>
+                </forge-toolbar>
+              </forge-scaffold>
+            </forge-dialog>
+          </forge-card>
+        </main>
+        <forge-footer slot="footer">
+          <p>My Footer</p>
+        </forge-footer>
+      </forge-scaffold>
     </div>
   );
 }
