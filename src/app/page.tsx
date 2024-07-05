@@ -52,7 +52,11 @@ export default function Home() {
         </forge-drawer>
 
         <main slot="body">
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
+            This is a small demo app showing off Forge web components with Next.js 15 and React 19.
+          </forge-card>
+
+          <forge-card style={{padding: '10px'}}>
             <h1>Accordion</h1>
             <forge-accordion>
               <forge-expansion-panel>
@@ -81,7 +85,7 @@ export default function Home() {
             </forge-accordion>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Badge</h1>
             <div style={{display: 'flex', gap: '8px'}}>
               <forge-badge theme="default">default</forge-badge>
@@ -96,7 +100,7 @@ export default function Home() {
             </div>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Banner</h1>
             <div>
               <p>
@@ -117,7 +121,7 @@ export default function Home() {
             </div>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Button Toggle</h1>
             <forge-button-toggle-group aria-label="Choose communication type">
               <forge-button-toggle value="email">By email</forge-button-toggle>
@@ -126,12 +130,12 @@ export default function Home() {
             </forge-button-toggle-group>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Calendar</h1>
             <forge-calendar view="month"></forge-calendar>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Chip Field</h1>
             <forge-chip-field variant theme shape>
               <label slot="label" for="tag-input">Tags</label>
@@ -140,7 +144,7 @@ export default function Home() {
             </forge-chip-field>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Chips</h1>
             <p>
               <forge-chip-set>
@@ -189,19 +193,19 @@ export default function Home() {
             </p>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Circular Progress</h1>
             <forge-circular-progress
               aria-label="Circular Progress"
             ></forge-circular-progress>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Color Picker</h1>
             <forge-color-picker value="#000000"></forge-color-picker>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Date Picker</h1>
             <p>
               <forge-date-picker>
@@ -239,7 +243,7 @@ export default function Home() {
             </p>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Dialog</h1>
             <forge-button variant="raised">Show Dialog</forge-button>
             <forge-dialog
@@ -268,7 +272,7 @@ export default function Home() {
             </forge-dialog>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Expansion Panel</h1>
             <forge-expansion-panel>
               <button
@@ -302,12 +306,12 @@ export default function Home() {
             </forge-expansion-panel>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Form Utilities</h1>
             ...
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Floating Action Button</h1>
             <p>
               <forge-fab aria-label="Favorite">
@@ -323,7 +327,7 @@ export default function Home() {
             </p>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Focus Indicator</h1>
             <div style={{position: 'relative', display: 'inline flex'}}>
               <button id="target-btn" style={{height: '100px', width: '100px', outline: 'none'}}>
@@ -333,7 +337,7 @@ export default function Home() {
             </div>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Inline Message</h1>
             <p>
               <forge-inline-message>
@@ -397,21 +401,21 @@ export default function Home() {
             </p>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Linear Progress</h1>
             <forge-linear-progress
               aria-label="Linear progress demo"
             ></forge-linear-progress>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Menu</h1>
             <forge-menu>
               <forge-button type="button" variant="raised">Menu</forge-button>
             </forge-menu>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Page State</h1>
             <forge-page-state>
               <img
@@ -429,12 +433,12 @@ export default function Home() {
             </forge-page-state>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Paginator</h1>
             <forge-paginator total="100"></forge-paginator>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Popover</h1>
             <forge-button id="popover-trigger" variant="raised">Show Popover</forge-button>
             <forge-popover
@@ -459,7 +463,7 @@ export default function Home() {
             </forge-popover>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Skeleton</h1>
             <p>
               <h3>Default</h3>
@@ -513,12 +517,12 @@ export default function Home() {
             </p>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Slider</h1>
             <forge-slider data-aria-label="Value"></forge-slider>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Split Button</h1>
             <forge-split-button variant="raised" theme="primary">
               <forge-button style={{minWidth: '100px'}} variant="raised">Send</forge-button>
@@ -532,7 +536,7 @@ export default function Home() {
             </forge-split-button>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Stepper</h1>
             <p>
               <forge-stepper>
@@ -565,7 +569,7 @@ export default function Home() {
             </p>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Tabs</h1>
             <forge-tab-bar data-aria-label="Demo tabs" active-tab="0">
               <forge-tab>Tab 1</forge-tab>
@@ -574,7 +578,7 @@ export default function Home() {
             </forge-tab-bar>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Time Picker</h1>
             <forge-time-picker use-24-hour-time="false" allow-invalid-time="false">
               <forge-text-field>
@@ -584,7 +588,7 @@ export default function Home() {
             </forge-time-picker>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Toast</h1>
             <forge-button variant="raised">Show Toast</forge-button>
             <forge-toast>
@@ -592,7 +596,7 @@ export default function Home() {
             </forge-toast>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Toolbar</h1>
             <forge-toolbar>
               <div slot="before-start">Before start</div>
@@ -603,7 +607,7 @@ export default function Home() {
             </forge-toolbar>
           </forge-card>
 
-          <forge-card>
+          <forge-card style={{padding: '10px'}}>
             <h1>Tooltip</h1>
             <forge-button variant="raised">Hover me</forge-button>
             <forge-tooltip>
